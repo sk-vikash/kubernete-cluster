@@ -19,12 +19,12 @@ Create private and public key required in the script by executing the below comm
 
 `ssh-keygen -f test-kube -P ""`
 
-## Installation/Usages
+## Provision
 
 
 Run below command to provision the infrastructure.
 
-`terraform apply --auto-approve to run the terraform`
+`terraform apply --auto-approve`
 
 Once infrastructure is created following will be output, assume `a1.b1.c1.d1` is public ip of master node & `a2.b2.c2.d2` is public ip of worker node
 
@@ -57,3 +57,10 @@ Run following command to ensure the kubernetes cluster is provisioned correctly.
 kubectl get nodes
 kubectl get pods --all-namespace
 ```
+
+
+## De-provision
+
+Run following command to deprovisioned the infrastructure.
+
+`terraform destroy --auto-approve`
