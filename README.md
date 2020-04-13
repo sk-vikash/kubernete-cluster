@@ -42,11 +42,11 @@ ssh -i test-kube ubuntu@a2.b2.c2.d2
 
 ## Master & worker node
 
-Follow below steps to create master and wroker node.
+Follow below steps to build master and wroker node.
 
 ```
-step a) Run `master_node.bash` on instance with ip a1.b1.c1.d1 
-step b) Allow other node with ip a2.b2.c2.d2 to join the mster node by follow the instruction from step (a)
+step a) Run master_node.bash on instance with ip a1.b1.c1.d1 
+step b) Allow other node with ip a2.b2.c2.d2 to join the mster node by following the instructions from step (a)
 ```
 
 ## Test

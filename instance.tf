@@ -1,9 +1,10 @@
 resource "aws_instance" "kube_admin" {
   ami = "ami-0be057a22c63962cb"
   instance_type = "t2.medium"
-  subnet_id     = "subnet-05d8cc6487568b447"
+  subnet_id = "${data.aws_subnet.subnet_2a.id}"
 
-  key_name = "${aws_key_pair.ssh_key.id}" //ATTACH KEY-PAIR
+
+  key_name = "${aws_key_pair.ssh_key.id}"
 
   security_groups = ["${aws_security_group.kube_sg.id}"]
 
@@ -16,8 +17,8 @@ resource "aws_instance" "kube_admin" {
 
 resource "aws_instance" "kube_node_1" {
   ami           = "ami-0be057a22c63962cb"
-  instance_type = "t2.micro"
-  subnet_id     = "subnet-05d8cc6487568b447"
+  instance_type = "t2.medium"
+  subnet_id = "${data.aws_subnet.subnet_2a.id}"
 
   key_name = "${aws_key_pair.ssh_key.id}"
 
