@@ -11,7 +11,7 @@ resource "aws_instance" "kube_admin" {
   user_data = "${data.template_file.user_data.rendered}"
 
   tags = {
-    Name = "Kube_Admin"
+    Name = "Kube_Master"
   }
 }
 
@@ -27,6 +27,6 @@ resource "aws_instance" "kube_node_1" {
   user_data = "${data.template_file.user_data.rendered}"
 
   tags = {
-    Name = "Kube_Node_1"
+    Name = "Kube_Worker_1"
   }
 }
